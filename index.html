@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="/Css/styles.css" />
+  <link rel="stylesheet" href="/Css/queries.css"/>
+
+  <title>Convertidor</title>
+</head>
+<body>
+
+  <section class="converter">
+
+    <header class="converted__header">
+      <h1 class="converted__heading">Convierte tus números</h1>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 converted__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+      </svg>
+    </header>
+
+    <form class="converted__form" id="converted__form">
+      <div class="converted__form-number">
+        <label for="number">Ingrese número</label>
+        <input type="text" placeholder="12345" id="numberUser"/>
+      </div>
+
+      <div class="converted__form-type">
+        <div>
+          <label for="from">De: </label>
+          <select name="from" id="from">
+            <option value="null">X &mdash; Base</option>
+            <option value="2"><span>2️⃣</span> &mdash; Base</option>
+            <option value="8"><span>8️⃣</span> &mdash; Base</option>
+            <option value="10"><span>1️⃣0️⃣</span> &mdash; Base</option>
+            <option value="16"><span>1️⃣6️⃣</span> &mdash; Base</option>
+          </select>
+        </div>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 converted__form-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 converted__form-icon-v" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+        </svg>
+        
+        <div>
+          <label for="to">A: </label>
+          <select name="to" id="to">
+d           <option value="null">X &mdash; Base</option>
+            <option value="2"><span>2️⃣</span> &mdash; Base</option>
+            <option value="8"><span>8️⃣</span> &mdash; Base</option>
+            <option value="10"><span>1️⃣0️⃣</span> &mdash; Base</option>
+            <option value="16"><span>1️⃣6️⃣</span> &mdash; Base</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="converted__results" id="converted__results">
+      </div>
+
+      <input type="submit" class="converted__form-btn" value="Convierte" />
+    </form>
+
+    <aside class="considerations">
+      <p>No es posible realizar la conversión de números decimales en todos los casos.</p>
+      <p>El sistema hexadecimal (Base 16) solo acepta las letras en mayúscula</p>
+    </aside>
+
+    <footer class="converted__footer" id="">
+      <cite class="converted__footer-author">Saulo Román &copy;</cite>
+      <p class="converted__footer-year" id="year"> <span>2022</span></p>
+    </footer>
+  </section>
+
+  <script src="/Js/Classes/Converter.js" type="module"></script>
+  <script src="/Js/Classes/UI.js" type="module"></script>
+  <script src="/Js/Classes/App.js" type="module"></script>
+  <script src="/Js/app.js" type="module"></script>
+  <script src="/Js/funciones.js" type="module"></script>
+  <script src="/Js/selectores.js" type="module"></script>
+
+
+  <!-- <script src="app.js"></script> -->
+</body>
+</html>
